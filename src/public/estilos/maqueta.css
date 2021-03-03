@@ -1,8 +1,10 @@
 
 /*maquetacion*/
+
 *{
     margin: 0;
     padding:0;
+    font-family: 'Roboto', sans-serif;
 }
 body{
     
@@ -56,23 +58,27 @@ h1{
      padding: 12px;
     background-color:#E6E6E6;
     display:inline-table; 
+ 
 }
+
 .principal{
-        width: 200px;
-            height: auto;
+        width: 238px;
+        padding: 12px 18px;
+            height: 220px;
             float: left;
            background-color: white;
+           box-shadow: 2px solid gray;
     }
     .posicion-i{
         width: 225px;
         padding: 12px;
-            height: 140px;
+            height: 220px;
             float: left;
            background-color: white;
     }
     .posicion-f{
         width: 200px;
-            height: 170px;
+            height: 250px;
             float: left;
            background-color: white;
 

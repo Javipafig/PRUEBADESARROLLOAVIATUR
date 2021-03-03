@@ -1,4 +1,8 @@
    /*Responsive . moviles*/
+   @media screen and (max-width: 600px) {
+    
+ 
+   }
 @media screen and (max-width: 600px) {
     h1 img{
     width: 100%;
@@ -9,11 +13,24 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .principal{
+        width: 200px;
+            height: 250px;
+            float: left;
+           background-color: white;
+    }
     .posicion-i{
-    width: 180px;
+    width: 50px;
     padding: 12px;
         height: 140px;
         float: left;
        background-color: white;
+}
+.posicion-f{
+    width: 200px;
+        height: 140px;
+        float: left;
+       background-color: white;
+
 }
 }

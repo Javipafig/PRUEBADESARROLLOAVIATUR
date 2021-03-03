@@ -4,176 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/checkbox.css">
     <link rel="stylesheet" href="estilos/responsive.css">
     <link rel="stylesheet" href="estilos/maqueta.css">
     <title>AVIATUR</title>
     <style>
     
-/*maquetacion*/
-*{
-    margin: 0;
-    padding:0;
-}
-body{
-    
-    background-color: #E6E6E6;
-}
-h1{
-        width: 100%;
-        background-color: #0665B3;
-        color: white;
-    }
-   
-    .posicion-secundaria{
-        width: 18%;
-            height: 700px;
-            background-color: #ECECEC;
-            display:inline-table;
-    }
-    .posicion-ejemplo{
-        width: 18%;
-            height: 700px;
-            background-color: #ECECEC;
-            display:inline-table;
-    }
+    @media screen and (max-width: 1024px) {
 
-    .posicion-principal{
-            width: 75%;
-            height: 240px;
-            background-color: #ECECEC;
-            display:inline-block;
-    }
- 
-  .posicion{
-    width: 35%;
-    height: 350px;
-    padding: 8px;
-    float: left;
-    display:inline-table;
-   }
-    .posicion-siguiente{
-    width:60%;
-    height: auto;
-    float: left;
-    background-color: #E6E6E6;
-    display:inline-table;
-
-}
-
-.box{
-    width:100%;
-    height: auto;
-     padding: 12px;
-    background-color:#E6E6E6;
-    display:inline-table; 
-}
-.principal{
+        .responsive{
+            width: 170px;
+        }
+    .principal{
         width: 200px;
-            height: auto;
+            height: 137px;
             float: left;
            background-color: white;
     }
     .posicion-i{
-        width: 225px;
-        padding: 12px;
-            height: 140px;
-            float: left;
-           background-color: white;
-    }
-    .posicion-f{
-        width: 200px;
-            height: 170px;
-            float: left;
-           background-color: white;
-
-    }
-
-    ul li{
-        list-style: none;
-    }
-
-    .caja-infohotel{
-        padding:22px;
-        width: 650px;
-        background-color: blueviolet;
-    }
-
-    .precio{
-        width: 100%;
-        color: orange;
-
-   }
-
-   .precio p{
-       display: inline-table;
-   }
-
-
-   .estilobusqueda{
-    float: right;
-    width: 87%;
-    padding: 10px;
-    border: none;
-    color: black;
-    font-size: 17px;
-   }
-   .estilobusqueda2{
-    float: left;
-    width: 57%;
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid gray;
-    color: black;
-    font-size: 17px;
-   }
-
-   .caja-filtros{
-       padding:12px;
-       width: 95%;
-       height: auto;
+    width: 150px;
+    padding: 12px;
+        height: 138px;
+        float: left;
        background-color: white;
-      
-       box-shadow: 2px 3px 4px 2px #888888;
-       
-   }
-
-   .icono{
-       float: left;
-       margin-left: 50px;
-   }
-   .accordion {
-background-color: white;
- color: #444;
- cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid gray;
- text-align: left;
- outline: none;
-  font-size: 15px;
-  transition: 0.4s;
 }
-.accordion2 {
-background-color: white;
- color: #444;
- cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid gray;
-  border-top: 1px solid gray;
- text-align: left;
- outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
+.posicion-f{
+    width: 200px;
+        height: 165px;
+        float: left;
+       background-color: white;
 
+}
+}
+@media screen and (max-width: 1204px) {
+
+}
     </style>
 </head>
 <body>
-    <h1><img src="../../assets/images/logo-aviatur.svg" width="200" style="padding: 8px;"></h1>
+    <h1><img src="assets/images/logo-aviatur.svg" width="200" style="padding: 8px;"></h1>
     <div class="posicion">
         <p style="padding: 8px;"><font size="6" style="color: gray;">Filtros</font></p>
         <div class="caja-filtros">
@@ -181,7 +52,7 @@ background-color: white;
     <button class="accordion"><img src="assets/icons/filters/search.svg" width="20" id="boton">&nbsp;&nbsp;&nbsp;<font size="4">Nombre del Hotel</font></button>
     <br><br><br><label class="icono"><img src="assets/icons/filters/bed-icon.svg" width="25"></label> <input type="text" id="formulario" placeholder="Hotel" class="estilobusqueda2"><br><br><br><br><br>
     <button class="accordion2"><p><img src="assets/icons/filters/star.svg" width="30">&nbsp;&nbsp;&nbsp;<font size="5">Estrellas</font></p></button><br><br>
-    <label class="container"><input type="checkbox" value="Todaslasestrellas"> Todas las estrellas</label><br>
+    <label class="container"><input type="checkbox" value="Todaslasestrellas" checked="true" value="true" name="celcius" id="celcius"> Todas las estrellas</label><br>
     <label class="container"><input type="checkbox" value="${Hotel.stars}"/><img src="assets/icons/filters/Estrella_amarilla.png" width="20"><span class="checkmark"></span></label><br>
     <label class="container"><input type="checkbox" value="${Hotel.stars}"/><img src="assets/icons/filters/Estrella_amarilla.png" width="18"><img src="assets/icons/filters/Estrella_amarilla.png" width="18"><span class="checkmark"></span></label><br>
     <label class="container"><input type="checkbox" value="${Hotel.stars}"/><img src="assets/icons/filters/Estrella_amarilla.png" width="18"><img src="assets/icons/filters/Estrella_amarilla.png" width="18"><img src="assets/icons/filters/Estrella_amarilla.png" width="18"><span class="checkmark"></span></label><br>
@@ -190,48 +61,30 @@ background-color: white;
 </div></div>
     <div class="posicion-siguiente">
         <div class="box">
-    <ul id="resultado">
+         
+    <ul id="Hoteles">
     </ul>
-    <script>
-           var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-             if (this.readyState == 4 && this.status == 200) {
-                var respuesta = JSON.parse(xhttp.responseText);
-            // console.log(respuesta);
-            var Hoteles = respuesta.Hoteles;
-                
-             }
-           
-                const formulario = document.querySelector('#formulario');
-                const boton = document.querySelector('#boton');
-                const resultado = document.querySelector('#resultado');
-                const filtrar = ()=>{
-                resultado.innerHTML = '';
-                  //  console.log(formulario.value);
-                  const texto = formulario.value.toLowerCase();
-                for(let Hotel of Hoteles){
-                    let name = Hotel.name.toLowerCase(); 
-                    if(name.indexOf(texto) !== -1){
-                        resultado.innerHTML += `
-                        <li><div class="principal"><img src="assets/images/hotels/${Hotel.image}" width="200" style=""/></div><div class="posicion-i"><font size="5" style="color:blue;">${Hotel.name}</font><br> ${Hotel.stars} <br> ${Hotel.amenities}</div><div class="posicion-f"><center><p style="color:gray; padding:8px;">Precio por noche por habitación </p></center><br><center><p><font size="5" style="color: orange;">ARS &nbsp;</p><strong>${Hotel.price}</strong></center></font><br> <center><a href="verhotel.html" style="background-color: blue; color: white; padding:8px 20px; border: 1px solid; border-radius:4px; margin: 2px; text-decoration: none;">VER HOTEL</a> </center></div></li>
-                        `
-                    }
-                }
-                    if(resultado.innerHTML === ''){
-                        resultado.innerHTML += `
-                        <li>Hotel no se encuentra..</li>
-                        `
-                    }
-        }
+    <script>var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+         if (this.readyState == 4 && this.status == 200) {
+            var respuesta = JSON.parse(xhttp.responseText);
+        // console.log(respuesta);
+        var Hoteles = respuesta.Hoteles;
+        var salida = '';
+             
 
-        boton.addEventListener('click', filtrar)
-        formulario.addEventListener('keyup', filtrar)
-
-        filtrar();
-    };
-             xhttp.open("GET", "data/data.json", true);
-            xhttp.send();
-    </script></div></div>
+             for(var i = 0; i < Hoteles.length; i++){
+              salida += `<div class="principal"><img src="assets/images/hotels/${Hoteles[i].image}" width="250" class="responsive"/></div><div class="posicion-i"><font size="5" style="color:blue;">${Hoteles[i].name}</font> <br> ${Hoteles[i].stars} <br> <img src="assets/icons/amenities/${Hoteles[i].amenities}" /> <br></div><div class="posicion-f"> <center><p style="color:gray; padding:8px;">Precio por noche por habitación </p></center><br><br><div class="precio"><center><p><font size="5" style="color: orange;">ARS &nbsp;</p><strong>${Hoteles[i].price}</strong></center></font></div><br> <center><a href="verhotel.html" style="background-color: blue; color: white; padding:8px; border: 1px solid; margin: 2px; text-decoration: none;">VER HOTEL</a> </center></div></div>`;
+         
+            }
+          document.getElementById('Hoteles').innerHTML = salida;
+            }  
+         
+        
+          
+        };
+         xhttp.open("GET", "data/data.json", true);
+        xhttp.send();</script></div></div>
 
 
 
