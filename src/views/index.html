@@ -11,34 +11,65 @@
     <link rel="stylesheet" href="estilos/maqueta.css">
     <title>AVIATUR</title>
     <style>
-    
+   @media screen and (max-width: 600px){
+        .posicion{
+    width: 92%;
+    height: 350px;
+    padding: 8px;
+    float: left;
+    display:inline-table;
+   }
+    }
     @media screen and (max-width: 1024px) {
 
         .responsive{
-            width: 170px;
+            width: 156px;
         }
     .principal{
-        width: 200px;
-            height: 137px;
+        width: 220px;
+            height: 140px;
             float: left;
            background-color: white;
     }
     .posicion-i{
     width: 150px;
     padding: 12px;
-        height: 138px;
+        height: 158px;
         float: left;
        background-color: white;
 }
 .posicion-f{
     width: 200px;
-        height: 165px;
+        height: 185px;
         float: left;
        background-color: white;
 
 }
 }
 @media screen and (max-width: 1204px) {
+    .responsive{
+            width: 186px;
+        }
+    .principal{
+        width: 200px;
+            height: 157px;
+            float: left;
+           background-color: white;
+    }
+    .posicion-i{
+    width: 150px;
+    padding: 12px;
+        height: 158px;
+        float: left;
+       background-color: white;
+}
+.posicion-f{
+    width: 200px;
+        height: 185px;
+        float: left;
+       background-color: white;
+
+}
 
 }
     </style>
@@ -62,29 +93,49 @@
     <div class="posicion-siguiente">
         <div class="box">
          
-    <ul id="Hoteles">
+    <ul id="resultado">
     </ul>
-    <script>var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-         if (this.readyState == 4 && this.status == 200) {
-            var respuesta = JSON.parse(xhttp.responseText);
-        // console.log(respuesta);
-        var Hoteles = respuesta.Hoteles;
-        var salida = '';
+    <script>
+         var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+             if (this.readyState == 4 && this.status == 200) {
+                var respuesta = JSON.parse(xhttp.responseText);
+            // console.log(respuesta);
+            var Hoteles = respuesta.Hoteles;
+                
              
-
-             for(var i = 0; i < Hoteles.length; i++){
-              salida += `<div class="principal"><img src="assets/images/hotels/${Hoteles[i].image}" width="250" class="responsive"/></div><div class="posicion-i"><font size="5" style="color:blue;">${Hoteles[i].name}</font> <br> ${Hoteles[i].stars} <br> <img src="assets/icons/amenities/${Hoteles[i].amenities}" /> <br></div><div class="posicion-f"> <center><p style="color:gray; padding:8px;">Precio por noche por habitación </p></center><br><br><div class="precio"><center><p><font size="5" style="color: orange;">ARS &nbsp;</p><strong>${Hoteles[i].price}</strong></center></font></div><br> <center><a href="verhotel.html" style="background-color: blue; color: white; padding:8px; border: 1px solid; margin: 2px; text-decoration: none;">VER HOTEL</a> </center></div></div>`;
-         
+           
+                const formulario = document.querySelector('#formulario');
+                const boton = document.querySelector('#boton');
+                const resultado = document.querySelector('#resultado');
+                const filtrar = ()=>{
+                resultado.innerHTML = '';
+                  //  console.log(formulario.value);
+                     const texto = formulario.value.toLowerCase();
+                    for(let Hotel of Hoteles){
+                    let name = Hotel.name.toLowerCase(); 
+                    if(name.indexOf(texto) !== -1){
+                        resultado.innerHTML += `
+                        <li><div class="principal"><img src="assets/images/hotels/${Hotel.image}" width="200" class="responsive"/></div><div class="posicion-i"><font size="5" style="color:blue;">${Hotel.name}</font><br> ${Hotel.stars} <br> ${Hotel.amenities}</div><div class="posicion-f"><center><p style="color:gray; padding:8px;">Precio por noche por habitación </p></center><br><center><p><font size="5" style="color: orange;">ARS &nbsp;</p><strong>${Hotel.price}</strong></center></font><br> <center><a href="verhotel.html" style="background-color: blue; color: white; padding:8px 20px; border: 1px solid; border-radius:4px; margin: 2px; text-decoration: none;">VER HOTEL</a> </center></div></li>
+                        `
+                    }
+                    }
+                    if(resultado.innerHTML === ''){
+                        resultado.innerHTML += `
+                        <li>Hotel no se encuentra..</li>
+                        `
+                    }
+                }
+                boton.addEventListener('click', filtrar);
+        formulario.addEventListener('keyup', filtrar);
+        filtrar();
             }
-          document.getElementById('Hoteles').innerHTML = salida;
-            }  
-         
-        
-          
-        };
-         xhttp.open("GET", "data/data.json", true);
-        xhttp.send();</script></div></div>
+       };
+             xhttp.open("GET", "data/data.json", true);
+            xhttp.send();
+
+
+    </script></div></div>
 
 
 

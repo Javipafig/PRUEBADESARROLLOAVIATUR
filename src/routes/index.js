@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const hoteles = require('../../data.json');
+const hoteles = require('../../data/data.json');
 
 router.get('/', (req,res) =>{
     res.render('index.html', { title: 'AVIATUR'});

@@ -4,33 +4,13 @@
  
    }
 @media screen and (max-width: 600px) {
+    h1{
+        width:100%;
+    }
     h1 img{
-    width: 100%;
     background-color:#0665B3;
-    width: 200px;
-    margin-left: 150px;
+    width: 150px;
+    margin-left: 110px;
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .principal{
-        width: 200px;
-            height: 250px;
-            float: left;
-           background-color: white;
-    }
-    .posicion-i{
-    width: 50px;
-    padding: 12px;
-        height: 140px;
-        float: left;
-       background-color: white;
-}
-.posicion-f{
-    width: 200px;
-        height: 140px;
-        float: left;
-       background-color: white;
-
-}
-}
