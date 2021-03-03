@@ -1,0 +1,160 @@
+
+/*maquetacion*/
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    
+    background-color: #E6E6E6;
+}
+h1{
+        width: 100%;
+        background-color: #0665B3;
+        color: white;
+    }
+   
+    .posicion-secundaria{
+        width: 18%;
+            height: 700px;
+            background-color: #ECECEC;
+            display:inline-table;
+    }
+    .posicion-ejemplo{
+        width: 18%;
+            height: 700px;
+            background-color: #ECECEC;
+            display:inline-table;
+    }
+
+    .posicion-principal{
+            width: 75%;
+            height: 240px;
+            background-color: #ECECEC;
+            display:inline-block;
+    }
+ 
+  .posicion{
+    width: 35%;
+    height: 350px;
+    padding: 8px;
+    float: left;
+    display:inline-table;
+   }
+    .posicion-siguiente{
+    width:60%;
+    height: auto;
+    float: left;
+    background-color: #E6E6E6;
+    display:inline-table;
+
+}
+
+.box{
+    width:100%;
+    height: auto;
+     padding: 12px;
+    background-color:#E6E6E6;
+    display:inline-table; 
+}
+.principal{
+        width: 200px;
+            height: auto;
+            float: left;
+           background-color: white;
+    }
+    .posicion-i{
+        width: 225px;
+        padding: 12px;
+            height: 140px;
+            float: left;
+           background-color: white;
+    }
+    .posicion-f{
+        width: 200px;
+            height: 170px;
+            float: left;
+           background-color: white;
+
+    }
+
+    ul li{
+        list-style: none;
+    }
+
+    .caja-infohotel{
+        padding:22px;
+        width: 650px;
+        background-color: blueviolet;
+    }
+
+    .precio{
+        width: 100%;
+        color: orange;
+
+   }
+
+   .precio p{
+       display: inline-table;
+   }
+
+
+   .estilobusqueda{
+    float: right;
+    width: 87%;
+    padding: 10px;
+    border: none;
+    color: black;
+    font-size: 17px;
+   }
+   .estilobusqueda2{
+    float: left;
+    width: 57%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: black;
+    font-size: 17px;
+   }
+
+   .caja-filtros{
+       padding:12px;
+       width: 95%;
+       height: auto;
+       background-color: white;
+      
+       box-shadow: 2px 3px 4px 2px #888888;
+       
+   }
+
+   .icono{
+       float: left;
+       margin-left: 50px;
+   }
+   .accordion {
+background-color: white;
+ color: #444;
+ cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+ text-align: left;
+ outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.accordion2 {
+background-color: white;
+ color: #444;
+ cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+ text-align: left;
+ outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}

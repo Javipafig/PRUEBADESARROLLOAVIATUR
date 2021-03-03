@@ -1,0 +1,19 @@
+   /*Responsive . moviles*/
+@media screen and (max-width: 600px) {
+    h1 img{
+    width: 100%;
+    background-color:#0665B3;
+    width: 200px;
+    margin-left: 150px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .posicion-i{
+    width: 180px;
+    padding: 12px;
+        height: 140px;
+        float: left;
+       background-color: white;
+}
+}
