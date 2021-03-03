@@ -14,9 +14,10 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-app.use('/api/hoteles',require('./routes/hoteles'));
+
 
 app.use(require('./routes/index'));
+app.use(require('./routes/hoteles'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
