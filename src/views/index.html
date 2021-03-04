@@ -116,7 +116,7 @@
                     let name = Hotel.name.toLowerCase(); 
                     if(name.indexOf(texto) !== -1){
                         resultado.innerHTML += `
-                        <li><div class="principal"><img src="assets/images/hotels/${Hotel.image}" width="200" class="responsive"/></div><div class="posicion-i"><font size="5" style="color:blue;">${Hotel.name}</font><br> ${Hotel.stars} <br> ${Hotel.amenities}</div><div class="posicion-f"><center><p style="color:gray; padding:8px;">Precio por noche por habitación </p></center><br><center><p><font size="5" style="color: orange;">ARS &nbsp;</p><strong>${Hotel.price}</strong></center></font><br> <center><a href="verhotel.html" style="background-color: blue; color: white; padding:8px 20px; border: 1px solid; border-radius:4px; margin: 2px; text-decoration: none;">VER HOTEL</a> </center></div></li>
+                        <li><div class="principal"><img src="assets/images/hotels/${Hotel.image}" width="250" class="responsive"/></div><div class="posicion-i"><font size="5" style="color:blue;"><strong>${Hotel.name}</strong></font><br> ${Hotel.stars} <br> ${Hotel.amenities}</div><div class="posicion-f"><center><p style="color:gray; padding:8px;">Precio por noche por habitación </p></center><br><center><p><font size="5" style="color: orange;">ARS &nbsp;</p><strong>${Hotel.price}</strong></center></font><br> <center><a href="verhotel.html" style="background-color: blue; color: white; padding:8px 20px; border: 1px solid; border-radius:4px; margin: 2px; text-decoration: none;">VER HOTEL</a> </center></div></li>
                         `
                     }
                     }
