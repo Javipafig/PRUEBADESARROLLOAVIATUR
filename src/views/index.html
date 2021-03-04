@@ -83,7 +83,11 @@
     <button class="accordion"><img src="assets/icons/filters/search.svg" width="20" id="boton">&nbsp;&nbsp;&nbsp;<font size="4">Nombre del Hotel</font></button>
     <br><br><br><label class="icono"><img src="assets/icons/filters/bed-icon.svg" width="25"></label> <input type="text" id="formulario" placeholder="Hotel" class="estilobusqueda2"><br><br><br><br><br>
     <button class="accordion2"><p><img src="assets/icons/filters/star.svg" width="30">&nbsp;&nbsp;&nbsp;<font size="5">Estrellas</font></p></button><br><br>
-    <label class="container"><input type="checkbox" value="Todaslasestrellas" checked="true" value="true" name="celcius" id="celcius"> Todas las estrellas</label><br>
+    <label class="container">Todas las estrellas
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+     </label>
+            <br>
     <label class="container"><input type="checkbox" value="${Hotel.stars}"/><img src="assets/icons/filters/Estrella_amarilla.png" width="20"><span class="checkmark"></span></label><br>
     <label class="container"><input type="checkbox" value="${Hotel.stars}"/><img src="assets/icons/filters/Estrella_amarilla.png" width="18"><img src="assets/icons/filters/Estrella_amarilla.png" width="18"><span class="checkmark"></span></label><br>
     <label class="container"><input type="checkbox" value="${Hotel.stars}"/><img src="assets/icons/filters/Estrella_amarilla.png" width="18"><img src="assets/icons/filters/Estrella_amarilla.png" width="18"><img src="assets/icons/filters/Estrella_amarilla.png" width="18"><span class="checkmark"></span></label><br>
@@ -116,7 +120,7 @@
                     let name = Hotel.name.toLowerCase(); 
                     if(name.indexOf(texto) !== -1){
                         resultado.innerHTML += `
-                        <li><div class="principal"><img src="assets/images/hotels/${Hotel.image}" width="200" class="responsive"/></div><div class="posicion-i"><font size="5" style="color:blue;">${Hotel.name}</font><br> ${Hotel.stars} <br> ${Hotel.amenities}</div><div class="posicion-f"><center><p style="color:gray; padding:8px;">Precio por noche por habitación </p></center><br><center><p><font size="5" style="color: orange;">ARS &nbsp;</p><strong>${Hotel.price}</strong></center></font><br> <center><a href="verhotel.html" style="background-color: blue; color: white; padding:8px 20px; border: 1px solid; border-radius:4px; margin: 2px; text-decoration: none;">VER HOTEL</a> </center></div></li>
+                        <li><div class="principal"><img src="assets/images/hotels/${Hotel.image}" width="250" class="responsive"/></div><div class="posicion-i"><font size="5" style="color:blue;"><strong>${Hotel.name}</strong></font><br> ${Hotel.stars} <br> <img src="assets/icons/amenities/${Hotel.amenities}" width="20" class="amenities"/></div><div class="posicion-f"><center><p style="color:gray; padding:8px;">Precio por noche por habitación </p></center><br><center><p><font size="5" style="color: orange;">ARS &nbsp;</p><strong>${Hotel.price}</strong></center></font><br> <center><a href="verhotel.html" style="background-color: blue; color: white; padding:8px 20px; border: 1px solid; border-radius:4px; margin: 2px; text-decoration: none;">VER HOTEL</a> </center></div></li>
                         `
                     }
                     }

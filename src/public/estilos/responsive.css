@@ -13,4 +13,55 @@
     margin-left: 110px;
     }
 }
+@media screen and (max-width: 600px){
+    .posicion{
+width: 92%;
+height: 350px;
+padding: 8px;
+float: left;
+display:inline-table;
+}
+.posicion-siguiente{
+width: 92%;
+height: 350px;
+padding: 8px;
+float: left;
+display:inline-table;
+}
+
+.responsive{
+   width: 20px;
+}
+.box{
+    width:100%;
+    height: auto;
+     padding: 12px;
+    background-color:blue;
+    display:inline-table; 
+ 
+}
+
+.principal{
+        width: 85%;
+        padding: 12px 18px;
+            height: 220px;
+            float: left;
+           background-color: white;
+           box-shadow: 2px solid gray;
+    }
+    .posicion-i{
+        width: 225px;
+        padding: 12px;
+            height: 220px;
+            float: left;
+           background-color: white;
+    }
+    .posicion-f{
+        width: 200px;
+            height: 250px;
+            float: left;
+           background-color: white;
+
+    }
+}
 
