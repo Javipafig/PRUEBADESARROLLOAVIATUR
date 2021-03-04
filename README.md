@@ -4,7 +4,9 @@ NODEJS
 Ejercutar 
 npm run dev.
 
-packages installinstalar los siguientes paquetes.
-npm
+se instalaron los siguientes paquetes de la libreria mpn.
+
 npm i express ejs morgan.
 npm i nodemon
+
+
